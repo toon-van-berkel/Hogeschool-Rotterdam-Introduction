@@ -1,3 +1,239 @@
+// HTML code (index.html)
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introductie Toon van Berkel</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4E0BAQHwLgswNIiBIg/company-logo_100_100/B4EZYuaBXbHcAU-/0/1744535296184?e=1753315200&v=beta&t=DRxyCntAXTmDE7AahACAEihBQ_BhTU0HjSGvhS1M6zM">
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Kreon:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="SectionContainer">
+        <section class="Section" data-section-index="0">
+            <img src="https://toonvb.com/img/me.jpeg" alt="Profile Toon van Berkel">
+            <button class="next-button">Kom er achter wie ik ben<span class="dots"></span></button>
+        </section>
+
+        <section class="Section" data-section-index="1">
+            <h2>👋 Even voorstellen: wie is Toon van Berkel?</h2>
+            <p class="typewriter"></p>
+        </section>
+
+        <section class="Section" data-section-index="2">
+            <img src="https://www.techniekcollegerotterdam.nl/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTMzODUsInB1ciI6ImJsb2JfaWQifX0=--0d9ad466216075da6110045762f17da404b1dcca/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJxdWFsaXR5Ijo4MCwicmVzaXplX3RvX2ZpbGwiOls0MDgsNTQ1XX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--bc2fc0fbd72ac7232aaf4fe9c474f52db05a0ad4/HET%20STORMT_TECHNIEK%20COLLEGE_2-7-2024-1014.jpg" alt="Opleiding MBO Toon van Berkel">
+            <h2>🎓 Mijn route van MBO naar HBO</h2>
+            <p class="typewriter"></p>
+        </section>
+
+        <section class="Section" data-section-index="3">
+            <h2>💡 Techniek als mijn tweede taal</h2>
+            <p class="typewriter"></p>
+        </section>
+
+        <section class="Section" data-section-index="4">
+            <h2>🌿 Wat ik doe als ik niet programmeer</h2>
+            <p class="typewriter"></p>
+        </section>
+
+        <section class="Section" data-section-index="5">
+            <h2>🚀 Mijn inspiratie & waar ik naartoe wil</h2>
+            <p class="typewriter"></p>
+        </section>
+
+        <section class="Section" data-section-index="6">
+            <h2>🧠 Hoe ik leer, werk en groei</h2>
+            <p class="typewriter"></p>
+        </section>
+
+        <section class="Section" data-section-index="7">
+            <h2>📣 Communicatie zonder poespas</h2>
+            <p class="typewriter"></p>
+        </section>
+
+        <section class="Section" data-section-index="8">
+            <h2>🌟 Mijn waarden als maker</h2>
+            <p class="typewriter"></p>
+        </section>
+
+        <section class="Section" data-section-index="9">
+            <h2>🌐 Bekijk mijn werk online</h2>
+            <p class="typewriter"></p>
+        </section>
+
+        <div id="skip-button">⏭ Skip</div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
+
+// CSS code (style.css)
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Kreon", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+.SectionContainer {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.Section {
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: left;
+    overflow: hidden;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    max-width: 50%;
+    border-radius: 200px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+
+button {
+    width: 300px;
+    max-width: 90%;
+    height: 70px;
+    padding: 10px;
+    border-radius: 10px;
+    border: #A64B86 solid 1px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Cascadia Mono', monospace;
+    box-shadow: 0 0 8px #A64B86, 0 0 12px #A64B86, 0 0 16px #A64B86;
+    animation: glowOrbit 5s infinite linear;
+    position: relative;
+    text-align: center;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #A64B86, 0 0 25px #A64B86, 0 0 35px #A64B86;
+}
+
+button::after {
+    content: ".";
+    right: 30px;
+    animation: dots 2s infinite steps(3);
+}
+
+@keyframes dots {
+    0%   { content: "."; }
+    33%  { content: ".."; }
+    66%  { content: "..."; }
+    100% { content: "."; }
+}
+
+@keyframes glowOrbit {
+    0%   { box-shadow: 0px -10px 20px #A64B86; }
+    25%  { box-shadow: 10px 0px 20px #A64B86; }
+    50%  { box-shadow: 0px 10px 20px #A64B86; }
+    75%  { box-shadow: -10px 0px 20px #A64B86; }
+    100% { box-shadow: 0px -10px 20px #A64B86; }
+}
+
+#skip-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #A64B86;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: 'Cascadia Mono', monospace;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+}
+
+#skip-button:hover {
+    background-color: #c769a0;
+}
+
+.typewriter {
+    width: 100%;
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+@media screen and (max-width: 768px) {
+    .Section {
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .typewriter {
+        font-size: 1rem;
+        width: 95%;
+        line-height: 1.6rem;
+    }
+
+    img {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        height: 60px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .typewriter {
+        font-size: 0.95rem;
+        line-height: 1.5rem;
+    }
+
+    button {
+        height: 55px;
+        font-size: 13px;
+    }
+
+    #skip-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+// Javascript code (app.js)
 const text = {
     pageTwo: `Hoi daar! Ik ben <span class="bold">Toon van Berkel</span> — drie woorden die mij het beste omschrijven? <em>Enthousiast</em>, <em>leergierig</em> en <em>creatief</em>. 🎨💡💻
         <br><br>Wat mij echt onderscheidt, is mijn manier van denken en werken. Waar sommigen problemen zien als blokkades, zie ik ze juist als kansen om slimmer en innovatiever te bouwen. Problemen zijn geen eindpunt, maar het begin van iets beters. Ik werk met een <strong>toekomstgerichte mindset</strong>: mijn code moet niet alleen vandaag werken, maar ook morgen nog relevant zijn. Het moet <u>gebruiksvriendelijk</u> zijn voor de eindgebruiker én <u>herbruikbaar</u> voor de developer die na mij komt.

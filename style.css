@@ -113,7 +113,7 @@ button::after {
 .typewriter {
     width: 100%;
     max-width: 700px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.8rem;
 }
 
